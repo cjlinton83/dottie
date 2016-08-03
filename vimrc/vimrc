@@ -1,0 +1,42 @@
+""" Last edited 07/16/2015 (set colorcolumn)
+""" DO NOT REMOVE THIS FILE FROM ~/Dropbox/vim/
+filetype plugin indent on   " filetype specific indent enabled
+set shiftwidth=4            " handing indent length on methods
+set tabstop=4               " number of visual spaces per <TAB> character
+set softtabstop=4           " number of spaces in tab when editing
+set expandtab               " turns <TAB> characters into spaces
+
+syntax enable               " enable syntax processing
+set background=dark         " better contrast text on dark background
+colorscheme jellybeans      " changes color scheme
+
+set number                  " show line numbers
+set showcmd                 " show command in bottom bar
+set cursorline              " highlight current line
+set wildmenu                " visual autocomplete for command menu
+set ruler                   " displays column/row count | mac
+set hlsearch                " highlights text after search :noh to clear
+set incsearch               " highlights match for search in real time
+
+execute "set colorcolumn=" . join(range(81,999), ',')
+
+""" Enable F9 to compile and run based on filetype
+"autocmd FileType java nnoremap <buffer> <F9> :exec '!clear ; javac' shellescape(expand('%'), 1) '&& java' shellescape(expand('%:r'), 1)<cr>
+autocmd FileType java nnoremap <buffer> <F8> :exec '!clear ; javac' shellescape(expand('%'), 1)<cr>
+autocmd FileType java nnoremap <buffer> <F9> :exec '!clear ; java' shellescape(expand('%:r'), 1)<cr>
+autocmd FileType python nnoremap <buffer> <F9> :exec '!clear ; python3' shellescape(expand('%'), 1)<cr>
+autocmd filetype c nnoremap <F9> :w <bar> exec '!clear ; make '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
+
+""" Un-map the arrow keys
+no <down> <Nop>
+no <left> <Nop>
+no <right> <Nop>
+no <up> <Nop>
+ino <down> <Nop>
+ino <left> <Nop>
+ino <right> <Nop>
+ino <up> <Nop>
+vno <down> <Nop>
+vno <left> <Nop>
+vno <right> <Nop>
+vno <up> <Nop>
