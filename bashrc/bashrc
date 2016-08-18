@@ -15,7 +15,7 @@ alias rmd="rm -rf "
 alias ll="ls -al --group-directories-first"
 alias la="ls -a --group-directories-first"
 
-alias clr="clear"
+alias cls="clear"
 
 alias bashrc="vim ~/.bashrc && source ~/.bashrc"
 
