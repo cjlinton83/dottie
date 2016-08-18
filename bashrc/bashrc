@@ -12,8 +12,8 @@ fi
 alias rmf="rm -f "
 alias rmd="rm -rf "
 
-alias lsal="ls -al"
-alias lsa="ls -a"
+alias ll="ls -al --group-directories-first"
+alias la="ls -a --group-directories-first"
 
 alias clr="clear"
 
