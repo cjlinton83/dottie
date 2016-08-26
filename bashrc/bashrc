@@ -20,3 +20,6 @@ alias cls="clear"
 alias bashrc="vim ~/.bashrc && source ~/.bashrc"
 
 alias dnfup="sudo dnf upgrade"
+
+## User defined export
+export CFLAGS="-Wall -Wextra"
