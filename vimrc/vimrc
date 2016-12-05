@@ -25,6 +25,7 @@ execute "set colorcolumn=" . join(range(81,999), ',')
 autocmd FileType java nnoremap <buffer> <F8> :exec '!clear ; javac' shellescape(expand('%'), 1)<cr>
 autocmd FileType java nnoremap <buffer> <F9> :exec '!clear ; java' shellescape(expand('%:r'), 1)<cr>
 autocmd FileType python nnoremap <buffer> <F9> :exec '!clear ; python3' shellescape(expand('%'), 1)<cr>
+autocmd filetype cpp nnoremap <F9> :w <bar> exec '!clear ; make '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
 autocmd filetype c nnoremap <F9> :w <bar> exec '!clear ; make '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
 
 """ Un-map the arrow keys
