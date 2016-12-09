@@ -27,6 +27,7 @@ autocmd FileType java nnoremap <buffer> <F9> :exec '!clear ; java' shellescape(e
 autocmd FileType python nnoremap <buffer> <F9> :exec '!clear ; python3' shellescape(expand('%'), 1)<cr>
 autocmd filetype cpp nnoremap <F9> :w <bar> exec '!clear ; make '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
 autocmd filetype c nnoremap <F9> :w <bar> exec '!clear ; make '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
+autocmd FileType javascript nnoremap <buffer> <F9> :exec '!clear ; node' shellescape(expand('%:r'), 1)<cr>
 
 """ Un-map the arrow keys
 no <down> <Nop>
